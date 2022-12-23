@@ -1,7 +1,7 @@
 {
-  "name": "vercel-testing",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "node express testing",
+  "description": "",
   "main": "index.js",
   "engines": {
     "node": "14.x"
