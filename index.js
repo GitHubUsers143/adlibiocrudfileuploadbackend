@@ -23,7 +23,7 @@ app.use("/", require("./routes/user"));
 app.use("/users", require("./routes/user"));
 app.use("/users/:id", require("./routes/user"));
 app.use("/users/update/:id", require("./routes/user"));
-// app.use("/users/delete/:id", require("./routes/user"));
+app.use("/users/delete/:id", require("./routes/user"));
 
 app.listen("9001", function () {
   console.log("Server is running");
