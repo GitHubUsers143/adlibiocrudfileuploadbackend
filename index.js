@@ -19,8 +19,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users/login", require("./routes/user"));
-// app.use("/", require("./routes/user"));
-// app.use("/users", require("./routes/user"));
+app.use("/", require("./routes/user"));
+app.use("/users", require("./routes/user"));
 // app.use("/users/:id", require("./routes/user"));
 // app.use("/users/update/:id", require("./routes/user"));
 // app.use("/users/delete/:id", require("./routes/user"));
