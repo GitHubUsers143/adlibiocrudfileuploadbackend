@@ -8,15 +8,16 @@ mongoose.connect(
   "mongodb+srv://cloudmongodbuser1:cloudmongodbpassword143@cluster0.gavsumi.mongodb.net/ad-lib-io?retryWrites=true&w=majority"
 );
 
-const home = require("./routes/home");
-
-// Middlewares
 const app = express();
-app.use(express.json());
 
-// Routes
-app.use("/home", home);
+app.use(cors());
 
-// connection
-const port = process.env.PORT || 9001;
-app.listen(port, () => console.log(`Listening to port ${port}`));
+app.use(bodyparser.json());
+
+app.get("/", (req, res) => {
+  res.send("Express is here");
+});
+
+app.listen("9001", function () {
+  console.log("Server is running");
+});
