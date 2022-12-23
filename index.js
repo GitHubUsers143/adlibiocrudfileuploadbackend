@@ -18,13 +18,6 @@ app.get("/", (req, res) => {
   res.send("Express is here");
 });
 
-app.use("/users/login", require("./routes/user"));
-app.use("/", require("./routes/user"));
-app.use("/users", require("./routes/user"));
-app.use("/users/:id", require("./routes/user"));
-app.use("/users/update/:id", require("./routes/user"));
-app.use("/users/delete/:id", require("./routes/user"));
-
 app.listen("9001", function () {
   console.log("Server is running");
 });
